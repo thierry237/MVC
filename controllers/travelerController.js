@@ -9,12 +9,12 @@ exports.addTraveler = function (req, res) {
 }
 
 exports.newTraveler = function (req, res) {
-    if (req.session.travelers === undefined) req.session.travelers;
-    let traveler = new Traveler(req.body.name, req.body.age)
-    req.session.travelers = traveler;
-    console.log(req.session.travelers.name.length);
-    let reservation = req.session.reservations;
+    if (req.session.travelers === undefined) req.session.travelers = [];
+    let traveler = new Traveler(req.body.name, req.body.age);
+    req.session.travelers.push(traveler);
+    console.log(req.session.travelers);
+    let reservation = new Reservation(req.session.reservations.destination, req.session.reservations.placeNumber);
     //console.log(reservation.destination);
-    res.render("recapInfos.ejs", { reservation, traveler });
+    res.render("recapInfos.ejs", { reservation, travelers: req.session.travelers });
 
 }

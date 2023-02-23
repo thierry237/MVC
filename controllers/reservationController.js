@@ -14,11 +14,3 @@ exports.newReservation = function (req, res) {
     res.redirect("/addTraveler");
 
 }
-exports.calculPrix = function (req, res) {
-    let reservation = new Reservation(req.body.destination, parseInt(req.body.placesNumber))
-    console.log(reservation.placeNumber)
-    reservation.price(reservation.placeNumber);
-    console.log(reservation.price(reservation.placeNumber));
-    res.render("home.ejs");
-}
-

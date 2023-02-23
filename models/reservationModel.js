@@ -6,8 +6,9 @@ class Reservation {
 
     }
 
-    price(placeNumber) {
-        this.total = placeNumber * 45;
+    price() {
+        let total = this.placeNumber * 45;
+        return total;
     }
 };
 module.exports = Reservation;

@@ -8,7 +8,6 @@ router.get('/addReservation', reservationController.addReservation);
 router.post('/newReservation', reservationController.newReservation);
 router.get('/addTraveler', travelerController.addTraveler);
 router.post('/newTraveler', travelerController.newTraveler);
-router.get('/sumReservation', reservationController.calculPrix);
 
 
 

@@ -9,13 +9,16 @@
     <h2><strong>Destination : <%=reservation.destination%></strong></h2>
     <h2><strong>Liste des passagers</strong></h2>
     <ul>
-        <% for(var i=0; i < traveler.name.length; i++ ) { %>
+        <% for(var i=0; i < travelers.length; i++ ) { %>
             <li>
-                <%=traveler.name[i]%>
-                    <%=traveler.age[i]%> ans
+                <%=travelers[i].name%>
+                    <%=travelers[i].age%> ans
             </li>
             <% } %>
     </ul>
+    <h2>
+        Total : <%= reservation.price(); %>
+    </h2>
     <form>
         <input type="submit" value="Etape suivante">
         <input type="button" value="Annuler la Réservation">
