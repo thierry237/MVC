@@ -1,0 +1,24 @@
+<html>
+<link href="../style.css" rel="stylesheet">
+
+<head>
+    <h1>Réservation</h1>
+</head>
+
+<body>
+    <form action="/newReservation" method="post">
+        <label for="destination">Destination </label>
+        <input type="text" id="destination" name="destination" required><br /><br />
+        <label for="placesNumber">Nombre de places</label>
+        <input type="number" id="placesNumber" name="placesNumber" min="1" required><br /><br />
+        <label for="assurance">Assurance </label>
+        <input type="checkbox" id="assurance" name="assurance"><br /><br />
+        <input type="submit" value="Etape suivante">
+    </form>
+
+
+    <button onclick="window.location.href='/sumReservation'">Caluler le total</button>
+
+</body>
+
+</html>
